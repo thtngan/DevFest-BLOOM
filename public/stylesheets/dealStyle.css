@@ -1,0 +1,129 @@
+.login-form {
+    width: 600px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 5% auto;
+    padding: 0 1% 0 2%;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    background-color: #b9eede;
+}
+
+.login-form .deal-form {
+    padding: 2%;
+}
+
+.login-form .deal-form .info {
+    padding: 2%;
+    font-size: 18px;
+}
+
+.deal .deco {
+    height: 100%;
+    width: auto;
+    float: right;
+}
+
+#logo {
+    display: block;
+    color: #f26398;
+    font-family: "Merienda", cursive;
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form h2 {
+    font-family: "Paytone One", sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    color: #f288Af;
+    margin-bottom: 20px;
+    z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+    .login-form {
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .login-form {
+        width: 90%;
+        margin: 10% 5%;
+    }
+}
+
+.login-form .input-icon {
+    outline: none;
+    border: #fff;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+.login-form .form-control {
+    height: 50px;
+    outline: none;
+    border: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+.deal .form-floating textarea {
+    border-radius: 5px;
+}
+
+.login-form .btn {
+    outline: none;
+    border: none;
+    background-color: #f288af;
+    color: #fff;
+    height: 50px;
+}
+
+.login-form .btn:hover {
+    background-color: #f288af;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.login-form p .fa-heart {
+    color: #f26398;
+}
+
+.login-form input[type="checkbox"] {
+    display: none;
+}
+
+.login-form input[type="checkbox"]+label span {
+    text-decoration: none;
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    vertical-align: middle;
+    background: url(../images/eye-slash-solid.svg) left top no-repeat;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-form input[type="checkbox"]:checked+label span {
+    background: url(../images/eye-solid.svg) left top no-repeat;
+}
+
+#snackbar-container {
+    position: fixed;
+    top: 0px;
+    left: 40%;
+    width: 20%;
+    height: auto;
+}
+
+#snackbar-container div {
+    text-align: center;
+    background-color: #f288Af;
+    color: #fff;
+    padding: 10px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BLOOM - Biên nhận giao dịch</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../public/images/logo_color.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/867a38eeb9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="../public/stylesheets/successStyle.css" rel="stylesheet" />
+    <style>
+        body {
+            margin-top: 2em;
+            /* background-color: #ffe4e1; */
+            background-color: #b9eede;
+        }
+        
+        .demo {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        
+        .demo .icon-check {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: inherit;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            z-index: 1;
+            border: 5px #32cd32 solid;
+            color: #32cd32;
+            padding-top: 0;
+            text-align: center;
+            font-size: 60px;
+            background-color: #fff;
+        }
+        
+        .demo .noti {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            margin: auto;
+            width: 450px;
+            min-height: 500px;
+            height: auto;
+            background-color: #fff;
+            box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+            padding-top: 55px;
+            padding-bottom: 20px;
+            border-radius: 2em;
+            word-break: break-all;
+        }
+        
+        .demo .noti h5 {
+            background-color: #efefef;
+            color: #999999;
+            padding: 5px;
+            padding-left: 20px;
+        }
+        
+        .demo .noti p {
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="demo">
+            <div class="icon-check">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="noti">
+                <h2 class="text-center">Giao dịch thành công</h2>
+                <h5>Thông tin giao dịch</h5>
+
+                <p>Số tài khoản người gửi: <br><span>
+                        <%=sendNumber%>
+                    </span></p>
+                <p>Thời gian: <span>
+                        <%=sendTime%>
+                    </span></p>
+                <p>Số dư tài khoản: <span id="id-send">
+                        <%=(Math.floor(sendLeft*70000000)).toLocaleString()%>
+                    </span> VNĐ</p>
+                <h5>Chi tiết giao dịch</h5>
+                <p>Tên dự án: <span>
+                        <%=project%>
+                    </span></p>
+                <p>Mã giao dịch:
+                    <br><a href="javascript:window.open('https://rinkeby.etherscan.io/tx/' + $('#hashID').text(), '_blank').focus();"><span id="hashID">
+                        <%=hashPrj%>
+                    </span></a>
+                </p>
+                <p>Số tài khoản người nhận: <br> <span>
+                        <%=fundNumber%>
+                    </span></p>
+                <p>Số tiền đã đóng góp: <span>
+                        <%=(Math.floor(sendMoney*70000000)).toLocaleString() %>
+                    </span> VNĐ</p>
+
+                <div class="row text-center">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary" onclick="window.location = '/'"><i
+                                class="fas fa-arrow-alt-circle-left"></i> Quay về</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-print"></i> In hoá
+                            đơn</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+body {
+    background: url('../images/bg.jpg') no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 5% auto;
+    margin-left: 10%;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-color: #b9eede;
+    /* background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
+}
+
+#logo {
+    display: block;
+    color: #f26398;
+    font-family: "Merienda", cursive;
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form h2 {
+    font-family: "Paytone One", sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    color: #f288Af;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .login-form {
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .login-form {
+        width: 90%;
+        margin: 10% 5%;
+    }
+}
+
+.input-icon {
+    outline: none;
+    border: #fff;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-icon:last-of-type {
+    border-radius: 0 5px 5px 0;
+}
+
+.form-control {
+    height: 50px;
+    outline: none;
+    border: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label span {
+    text-decoration: none;
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    vertical-align: middle;
+    background: url(../images/eye-slash-solid.svg) left top no-repeat;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="checkbox"]:checked+label span {
+    background: url(../images/eye-solid.svg) left top no-repeat;
+}
+
+.login-form .btn {
+    outline: none;
+    border: none;
+    background-color: #f288af;
+    color: #fff;
+    height: 50px;
+}
+
+.login-form .btn:hover {
+    background-color: #f288af;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.login-form p .fa-heart {
+    color: #f26398;
+}
+
+#snackbar-container {
+    position: fixed;
+    top: 0px;
+    left: 40%;
+    width: 20%;
+    height: auto;
+}
+
+#snackbar-container div {
+    text-align: center;
+    background-color: #f288Af;
+    color: #fff;
+    padding: 10px;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BLOOM - Về chúng tôi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../public/images/logo_white.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/867a38eeb9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/stylesheets/menuStyle.css">
+    <link rel="stylesheet" href="../public/stylesheets/aboutStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "104128298667528");
+        chatbox.setAttribute("attribution", "biz_inbox");
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v11.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container-fluid">
+        <div id="mySidebar" class="sidebar">
+            <span id="logo"><img src="../public/images/logo_white.png" alt="" width="80" height="100"></span>
+            <h2>BLOOM</h2>
+            <input type="checkbox" id="action" value=""><label for="action"><span></span></label>
+            <!-- <input type="checkbox" id="action" value="1"/> <label>Bạn có thích blog freetuts.net không?</label> -->
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-caret-left"></i></a> -->
+            <a href="/" class="menu"><i class="fas fa-home"></i><span>&nbsp;&nbsp;Trang chủ</span></a>
+            <a href="/search" class="menu"><i class="fas fa-search"></i><span>&nbsp;&nbsp;Tìm kiếm</span></a>
+            <a href="/about" class="menu active"><i class="fas fa-info-circle"></i><span>&nbsp;&nbsp;Về chúng
+                    tôi</span></a>
+            <!-- <button class="openbtn" onclick="openNav()">☰</button> -->
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+            <div class="sticky-top">
+                <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading1">Về BLOOM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading2">Thành Viên BLOOM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading3">Góp ý</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <h4 id="scrollspyHeading1"><br><br>Về BLOOM</h4>
+            <div class="row about">
+                <img src="../public/images/story.png" alt="story_banner">
+                <img src="../public/images/passion.png" alt="passion_banner">
+            </div>
+            <h4 id="scrollspyHeading2"><br><br>Thành viên BLOOM</h4>
+            <div class="team">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/images/Minh.jpg" class="card-img-top" alt="Hoàng Anh">
+                    <div class="card-body">
+                        <h5 class="card-title">Trịnh Văn Minh</h5>
+                        <p class="card-text">Nhóm trưởng</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/images/Quang.jpg" class="card-img-top" alt="Thiên Quang">
+                    <div class="card-body">
+                        <h5 class="card-title">Ngô Thiên Quang</h5>
+                        <p class="card-text">Thành viên</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/images/Kim.jpg" class="card-img-top" alt="Thiên Kim">
+                    <div class="card-body">
+                        <h5 class="card-title">Lê Thiên Kim</h5>
+                        <p class="card-text">Thành viên</p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/images/Ngan.jpg" class="card-img-top" alt="Thảo Ngân">
+                    <div class="card-body">
+                        <h5 class="card-title">Trần Hoàng Thảo Ngân</h5>
+                        <p class="card-text">Thành viên</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="../public/images/Dung.png" class="card-img-top" alt="Thảo Ngân">
+                    <div class="card-body">
+                        <h5 class="card-title">Mai Thế Dũng</h5>
+                        <p class="card-text">Thành viên</p>
+                    </div>
+                </div>
+
+                <!-- <div class="card" style="width: 18rem;">
+                    <img src="../public/images/Phong.png" class="card-img-top" alt="Trọng Phong">
+                    <div class="card-body">
+                        <h5 class="card-title">Phan Võ Trọng Phong</h5>
+                        <p class="card-text">Thành viên</p>
+                    </div>
+                </div> -->
+
+            </div>
+            <h4 id="scrollspyHeading3"><br><br>Đóng góp ý kiến</h4>
+            <p>Chúng tôi trân trọng ý kiến của khách hàng. Hãy đóng góp ý kiến hoặc thắc mắc của bạn ở đây để chúng tôi có thể giải đáp và BLOOM ngày càng được hoàn thiện hơn.</p>
+            <form class="row g-3 needs-validation" action="/about/fb" method="POST" novalidate>
+                <div class="col-md-12 position-relative">
+                    <label for="validationTooltip01" class="form-label">Tên *</label>
+                    <input type="text" class="form-control" id="validationTooltip01" placeholder="Họ và tên của bạn" required name="name">
+                    <div class="invalid-tooltip">
+                        Mời bạn điền tên
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <label for="validationTooltip02" class="form-label">Số điện thoại *</label>
+                    <input type="text" class="form-control" id="validationTooltip02" placeholder="---- --- ---" required name="phone">
+                    <div class="invalid-tooltip">
+                        Mời bạn nhập số điện thoại
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <label for="validationTooltip02" class="form-label">Email *</label>
+                    <input type="text" name="email" class="form-control" id="validationTooltip02" placeholder="name@example.com" name="mail" required>
+                    <div class="invalid-tooltip">
+                        Mời bạn nhập email
+                    </div>
+                </div>
+                <div class="col-md-12 position-relative">
+                    <label for="validationTooltip03" class="form-label">Tiêu đề *</label>
+                    <input type="text" class="form-control" id="validationTooltip03" name="title" required>
+                    <div class="invalid-tooltip">
+                        Mời bạn tóm tắt nội dung thành một vài từ
+                    </div>
+                </div>
+                <div class="col-md-12 position-relative">
+                    <label for="validationTooltip04" class="form-label">Nội dung *</label>
+                    <textarea class="form-control" rows="3" placeholder="Mô tả chi tiết" name="content" id="validationTooltip04" required></textarea>
+                    <div class="invalid-tooltip">
+                        Mời bạn mô tả nội dung mà bạn muốn đóng góp để BLOOM có thế phản hồi tốt hơn
+                    </div>
+                </div>
+                <em>* Bắt buộc</em>
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary" type="submit" id="send_request"><i
+                            class="fas fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;Gửi yêu cầu</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+    <footer>
+        <div class="navigation text-center">
+            <a href="/">Trang chủ</a> <i class="fas fa-circle"></i>
+            <a href="/search">Tìm kiếm</a> <i class="fas fa-circle"></i>
+            <a href="/about">Về chúng tôi</a>
+        </div>
+        <div class="rounded-social">
+            <a href="https://www.facebook.com/qpankcosmetic/" class="fa fa-facebook media" id="fb"></a>
+            <a href="https://www.instagram.com/qpankcosmetic/" class="fa fa-instagram media" id="ins"></a>
+            <a href="https://www.pinterest.com/qpankcosmetic/_created/" class="fa fa-pinterest media" id="pin"></a>
+        </div>
+        <p class="text-center">Designed with <i class="far fa-heart"></i> by BLOOM</p>
+        <p class="rights">&copy;BLOOM All Rights Reserved.</p>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-8">
+                <h5>Subcribe</h5>
+                <div class="subcribe">
+                    <input type="text" placeholder="Email" />
+                    <button class="submit fas fa-paper-plane"></button>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-4 contact">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <h5>Contact Us</h5>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td>BLOOM@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-phone-alt"></i></td>
+                            <td>(84)13 456 789</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="../public/javascripts/aboutScript.js"></script>
+    <script src="../public/javascripts/menuScript.js"></script>
+</body>
+
+</html>

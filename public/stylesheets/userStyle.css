@@ -1,0 +1,87 @@
+#pic {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#pic .bg {
+    border-radius: 2em;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#pic .ava {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+}
+
+.name {
+    margin-top: 120px;
+}
+
+.project {
+    margin: auto 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+.project .card {
+    margin: 30px 10px;
+    border-radius: 1em;
+    width: 19rem;
+}
+
+.img-card {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+img.absolute {
+    left: 0;
+    position: absolute;
+}
+
+.project a {
+    text-decoration: none;
+    color: #000;
+}
+
+.project .card-body {
+    height: 150px;
+}
+
+@media screen and (max-width: 768px) {
+    .project .card {
+        margin: 30px 10px;
+        width: 17rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #pic .ava {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+    }
+    .name {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .project .card {
+        margin: 30px 0;
+        width: 15rem;
+    }
+}

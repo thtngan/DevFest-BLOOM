@@ -1,0 +1,126 @@
+#main {
+    padding-left: 10px;
+}
+
+.progressbar_container {
+    width: 700px;
+    margin: auto;
+}
+
+.progressbar {
+    counter-reset: step;
+}
+
+.progressbar li {
+    list-style: none;
+    display: inline-block;
+    width: 24.33%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.progressbar li:before {
+    content: counter(step);
+    font-family: FontAwesome;
+    font-size: 25px;
+    counter-increment: step;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    color: #ddd;
+    border: 3px solid #ddd;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #fff;
+}
+
+.progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 3px;
+    background-color: #ddd;
+    top: 20px;
+    left: -65px;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.active {
+    color: green;
+}
+
+.progressbar li.active:before {
+    border-color: green;
+    color: green;
+}
+
+.progressbar li.active+li:after {
+    background-color: green;
+}
+
+.progressbar li.first:before {
+    content: '\f00c';
+}
+
+.progressbar li.second:before {
+    content: '\f4c0';
+    color: #fff;
+    border: 3px solid green;
+    background-color: green;
+}
+
+.progressbar li.third:before {
+    content: '\f252';
+}
+
+.progressbar li.forth:before {
+    content: '\f005';
+}
+
+@media screen and (max-width: 768px) {
+    .progressbar_container {
+        width: 500px;
+    }
+    .progressbar li:after {
+        width: 81px;
+        left: -41px;
+    }
+}
+
+.withdrawal-form {
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 0 9px 10px hsla(20, 67%, 75%, 0.31);
+    padding: 3% 2%;
+    background-color: hsla(20, 83%, 82%, 0.31);
+}
+
+.withdrawal-form span input[type="checkbox"] {
+    display: none;
+}
+
+.withdrawal-form span input[type="checkbox"]+label span {
+    text-decoration: none;
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    vertical-align: middle;
+    background: url(../images/eye-slash-solid.svg) left top no-repeat;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.withdrawal-form span input[type="checkbox"]:checked+label span {
+    background: url(../images/eye-solid.svg) left top no-repeat;
+}

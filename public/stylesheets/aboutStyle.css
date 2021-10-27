@@ -1,0 +1,54 @@
+  body {
+      position: relative;
+  }
+  
+  .head {
+      font-family: 'Roboto', sans-serif;
+      text-align: left;
+  }
+  
+  .nav-tabs a {
+      color: #0047ab;
+      font-family: 'Mitr', sans-serif;
+  }
+  
+  .sticky-top {
+      transition: 10s;
+  }
+  
+  .about p {
+      text-align: justify;
+  }
+  
+  .about {
+      margin: 0 0 3em;
+  }
+  
+  .team .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 1em;
+  }
+  
+  .team {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+  }
+  
+  .card img {
+      border-radius: 0;
+  }
+  
+  #send_request {
+      text-decoration: none;
+      border-radius: 2em;
+      background-color: #0047ab;
+      color: #fff;
+      width: 200px;
+      height: 40px;
+      border: #0047ab;
+  }
+  
+  #send_request:hover {
+      transform: scale(1.1);
+  }

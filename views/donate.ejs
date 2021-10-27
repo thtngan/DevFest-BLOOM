@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BLOOM - Đóng góp</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../public/images/logo_white.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/867a38eeb9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/stylesheets/dealStyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/loadingio/ldLoader@v1.0.0/dist/ldld.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/loadingio/ldLoader@v1.0.0/dist/ldld.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <img id="my-loader" class="ldld full" style="z-index: 99;" src="../public/images/Spinner-1s-114px.svg">
+    <div class="deal">
+        <form class="login-form needs-validation" novalidate onsubmit="return false;">
+            <div class="row">
+                <div class="col-9 deal-form">
+                    <span id="logo"><img src="../public/images/logo_color.png" alt="logo"></span><br>
+                    <h2 id="prj-name">
+                        <%= project[0].Name %>
+                    </h2>
+                    <div class="info">
+                        <p><strong>Họ và Tên: </strong><span>
+                                <%= user[0].FullName %>
+                            </span></p>
+                        <p><strong>Số dư tài khoản: </strong><span>
+                                <%= (Math.floor(money*70000000)).toLocaleString() %>
+                            </span> VNĐ</p>
+                        <p id="MetaMask" style="display: none">
+                            <%=user[0].NumberMetaMask%>
+                        </p>
+                        <span id="MoneyLeft" style="display: none;">
+                            <%=money*70000000 %>
+                        </span>
+                    </div>
+                    <!-- <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text input-icon"><i class="fas fa-user-circle"></i></span>
+                        <input autocomplete="off" id="_password" type="text" class="form-control" placeholder="Họ & Tên" aria-label="Username" required>
+                        <div class="invalid-feedback">
+                            Vui lòng nhập họ tên
+                        </div>
+                    </div> -->
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text input-icon"><i class="fas fa-donate"></i></span>
+                        <input autocomplete="off" id="don-val" type="number" min="1000" max="<%= user[0].MoneyLeft*70000000 %>" class="form-control" placeholder="Giá trị đóng góp" aria-label="value" required name="moneySend">
+                        <div class="invalid-feedback">
+                            Vui lòng nhập giá trị
+                        </div>
+                    </div>
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text input-icon"><i class="fas fa-key"></i></span>
+                        <input autocomplete="off" type="password" class="form-control" id="_password" placeholder="Mật khẩu" aria-label="Username" required>
+                        <span class="input-group-text input-icon"><input type="checkbox" id="eye" value=""><label
+                                for="eye"><span></span></label>
+                        </span>
+                        <div class="invalid-feedback">
+                            Vui lòng nhập mật khẩu
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Lời nhắn</label>
+                    </div>
+                    <br>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn login_btn" id="donate" onclick="verifier();">
+                            ĐÓNG GÓP
+                        </button>
+                    </div>
+                    <div class=" text-center ">
+                        <small>BLOOM chân thành cảm ơn bạn</small>
+                    </div>
+                    <hr>
+                    <p class=" text-center ">Designed with <i class=" far fa-heart "></i> by BLOOM</p>
+                </div>
+                <div class=" col-3 ">
+                    <img src=" ../public/images/holding-hand (1).png " class=" deco " alt=" ">
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <div id="snackbar-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src=" ../public/javascripts/LoginScript.js"></script>
+</body>
+
+</html>
