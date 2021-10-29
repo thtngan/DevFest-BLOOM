@@ -20,16 +20,17 @@ const fundraiserSchema = new mongoose.Schema({
     FullName: {
         type: String
     },
+    Email: {
+        type: String,
+        unique: true
+    },
     Money: {
         type: String
     },
     NumberMetaMask: {
         type: String
     },
-    List: {
-        type: [listProjectSchema],
-        default: undefined
-    }
+    Project: [listProjectSchema]
 });
 
 module.exports = mongoose.model('fundraiser', fundraiserSchema, 'Fundraiser')

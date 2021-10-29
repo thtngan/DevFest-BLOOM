@@ -5,7 +5,7 @@ const project = require('../src/models/Project');
 const donor = require('../src/models/Donor');
 const Web3 = require('web3');
 
-const { verifyToken, isDonor } = require("../middlewares/auth.jwt");
+const { verifyToken, isDonor, isFundraiser } = require("../middlewares/auth.jwt");
 const web3 = new Web3(
     new Web3.providers.HttpProvider("https://rinkeby.infura.io/v3/7771ec896eed44338f3debadbf6e047f")
 );

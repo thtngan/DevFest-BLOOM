@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/menuStyle.css">
-    <link rel="stylesheet" href="../public/stylesheets/homeStyle.css">
-    <link rel="stylesheet" href="../public/stylesheets/infoStyle.css">
+    <link rel="stylesheet" href="/stylesheets/menuStyle.css">
+    <link rel="stylesheet" href="/stylesheets/homeStyle.css">
+    <link rel="stylesheet" href="/stylesheets/infoStyle.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script src="https://kit.fontawesome.com/867a38eeb9.js" crossorigin="anonymous"></script>
@@ -56,6 +56,9 @@
                     </ul>
                 </nav>
             </div>
+            <div id="user_role" style="display: none;">
+                <%= role %>
+            </div>
             <div class="scrollspy_content">
                 <h4 id="scrollspyHeading1"></h4>
                 <h1 class="project_name">
@@ -69,7 +72,7 @@
                                     <%= project[0].Quantity %>
                                 </span></div>
                             <div class="col-lg-6 col-md-12 text-end">Giá: <span id="price">
-                                    <%= project[0].Money %>
+                                    <%= project[0].Money.toLocaleString() %>
                                 </span></div>
                             <!-- <div class="col-lg-4 col-md-12 text-end">
                                 <span id="num_donor">
@@ -89,9 +92,11 @@
                             <%= project[0].DateEnd %>
                         </span>
                         <div class="d-grid gap-2">
-                            <button class="btn bg-btn-don" type="button" onclick="location.href='../donate/<%= project[0].Name %>' + '?user=' + localStorage.getItem('BLOOM')">ĐÓNG
+                            <button class="btn bg-btn-don" type="button" id="visiter" onclick="location.href='../donate/<%= project[0].Name %>' + '?user=' + localStorage.getItem('BLOOM')">ĐÓNG
                                 GÓP</button>
+                            <button class="btn bg-btn-don" type="button" id="funder" style="display: none" onclick="location.href='../project/withdrawal/<%= project[0].Name %>' + '?user=' + localStorage.getItem('BLOOM')">RÚT TIỀN</button>
                         </div>
+
                     </div>
                     <div class="col-md-8 col-sm-12 content">
                         <h3>Danh sách người đóng góp</h3>
@@ -121,7 +126,7 @@
                                             <%= project[0].ListDonor[i].DonorTime %>
                                         </td>
                                         <td>
-                                            <%= project[0].ListDonor[i].DonorSend %>
+                                            <%= Number(project[0].ListDonor[i].DonorSend).toLocaleString() %>
                                         </td>
                                     </tr>
                                     <% } %>
@@ -418,8 +423,8 @@
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-        <script src="../public/javascripts/menuScript.js"></script>
-        <script src="../public/javascripts/infoScript.js"></script>
+        <script src="/javascripts/menuScript.js"></script>
+        <script src="/javascripts/infoScript.js"></script>
 </body>
 
 </html>

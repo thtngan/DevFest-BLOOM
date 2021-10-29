@@ -11,7 +11,7 @@ body {
     margin: 5% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     background-color: #b9eede;
-    background: url('../images/25d7bf4fc97cefcb8c4d8f9d548daa36.jpg') no-repeat;
+    background: url('../images/25d7bf4fc97cefcb8c4d8f9d548daa36.jpg') repeat-y;
     background-size: 50%;
     background-color: #ffe4e1;
     /* background-color: #FFE6FA; */
@@ -78,7 +78,7 @@ form {
 }
 
 .form-control {
-    height: 50px;
+    height: 42px;
     outline: none;
     border: #fff;
     border-radius: 0 5px 5px 0;

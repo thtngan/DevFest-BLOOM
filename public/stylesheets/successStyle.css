@@ -42,6 +42,7 @@ body {
     padding-top: 55px;
     padding-bottom: 20px;
     border-radius: 2em;
+    word-break: break-all;
 }
 
 .demo .noti h5 {
@@ -52,5 +53,5 @@ body {
 }
 
 .demo .noti p {
-    padding-left: 20px;
+    padding: 0 20px;
 }

@@ -51,7 +51,8 @@
                 </a>
             </div>
             <div id="welcome" class="text-end" style="display: none;">
-                <a href="/login" onclick="localStorage.removeItem('BLOOM');"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                <a href="/login" onclick="localStorage.removeItem('BLOOM');"><i class="fas fa-sign-out-alt"></i> Đăng
+                    xuất</a>
             </div>
             <br>
 
@@ -67,7 +68,7 @@
                         <div class="centered">
                             <h1>Ấm áp mùa trung thu giữa đại dịch</h1>
                             <p>Hi vọng những món quà nhỏ này sẽ đem đến niềm vui tinh thần cho các em trong thời kì dịch bệnh khó khăn</p>
-                            <button><a href="project/Tết%20trung%20thu%20thời%20dịch%20COVID">Donate now</a></button>
+                            <button onclick="location.href='/project/Tết%20trung%20thu%20thời%20dịch%20COVID' + '?user=' + localStorage.getItem('BLOOM')">Donate now</button>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -83,7 +84,7 @@
                         <div class="centered">
                             <h1>Hướng về miền trung</h1>
                             <p>Mưa bão ở miền trung đã làm 84 người thiệt mạng và 38 người mất tích. Cùng chung tay giúp đỡ đồng bào miền trung vượt qua khó khăn.</p>
-                            <button><a href="/project/Cứu%20trợ%20người%20dân%20sau%20lũ%20miền%20trung%20Việt%20Nam">Donate now</a></button>
+                            <button onclick="location.href='/project/Cứu%20trợ%20người%20dân%20sau%20lũ%20miền%20trung%20Việt%20Nam' + '?user=' + localStorage.getItem('BLOOM')">Donate now</button>
                         </div>
                     </div>
                 </div>
@@ -101,24 +102,23 @@
                 <div class="head">
                     <h1>CÁC DỰ ÁN ĐANG THỰC HIỆN</h1>
                 </div>
+
                 <div class="horizontal-scroll-wrapper squares" id="list">
                     <button type="button" class="btn btn-light" id="preBtn"><i class="fas fa-chevron-left"></i></button>
                     <% for(var i=0; i < projectList.length; i++) { %>
-                        <div class="card">
-                            <a href="<%= '/project/' + projectList[i].Name %>">
-                                <img src="<%= projectList[i].Img[0] %>" class="card-img-top" alt="Project images">
+                        <div class="card" onclick="location.href='/project/<%= projectList[i].Name %>' + '?user=' + localStorage.getItem('BLOOM')">
+                            <img src="<%= projectList[i].Img[0] %>" class="card-img-top" alt="Project images">
 
-                                <div class="overlay">
-                                    <h3>
-                                        <%= projectList[i].Name %>
-                                    </h3>
-                                    <small>
+                            <div class="overlay">
+                                <h3>
+                                    <%= projectList[i].Name %>
+                                </h3>
+                                <small>
                                         <%= projectList[i].Fundraiser %>
                                     </small>
-                                    <br><br>
-                                    <button type="button" class="btn btn-outline-light">Đóng góp ngay</button>
-                                </div>
-                            </a>
+                                <br><br>
+                                <button type="button" class="btn btn-outline-light">Đóng góp ngay</button>
+                            </div>
                         </div>
                         <% } %>
                             <button type="button" class="btn btn-light" id="nextBtn"><i
@@ -154,34 +154,6 @@
                                     class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-3">
-                    <div class="card-i bg-1">
-                        <i class="fas fa-scroll"></i>
-                        <h3>We guarantee everything we make.</h3>
-                        <p>Because we know prioritizing durability results in consuming less energy, wasting less water and creating less trash.</p>
-                    </div>
-                   
-                </div>
-                <div class="col-3">
-                    <div class="card-i bg-2">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>We guarantee everything we make.</h3>
-                </div>
-                </div>
-                <div class="col-3">
-                    <div class="card-i bg-3">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>We guarantee everything we make.</h3>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card-i bg-4">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>We guarantee everything we make.</h3>
-                    </div>
-                </div>
-            </div> -->
 
             <div class='row'>
                 <div class='col-12'>

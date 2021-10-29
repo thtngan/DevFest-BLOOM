@@ -25,6 +25,25 @@ function verifyToken(req, res, next) {
     });
 };
 
+function isFundraiser(req, res, next) {
+    console.log(req.userId)
+    User.findById(req.userId).exec((err, user) => {
+        if (err) {
+            res.status(500)
+            res.render('forbidden', { message: err, code: '500' })
+            return;
+        }
+        if (user.Role === 1) {
+            next();
+            return;
+        }
+        res.status(403)
+        res.render('forbidden', { message: 'Not Allow', code: '403' })
+        return;
+
+    });
+};
+
 function isDonor(req, res, next) {
     console.log(req.userId)
     User.findById(req.userId).exec((err, user) => {
@@ -43,7 +62,10 @@ function isDonor(req, res, next) {
 
     });
 };
+
+
 module.exports = {
     verifyToken,
-    isDonor
+    isDonor,
+    isFundraiser
 };

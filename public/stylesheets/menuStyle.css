@@ -110,12 +110,12 @@ body {
     text-decoration: none;
 }
 
-input[type="checkbox"] {
+.sidebar input[type="checkbox"] {
     margin-right: 7px;
     display: none;
 }
 
-input[type="checkbox"]+label span {
+.sidebar input[type="checkbox"]+label span {
     position: absolute;
     bottom: 0;
     right: 25px;
@@ -132,7 +132,7 @@ input[type="checkbox"]+label span {
     transition: .6s;
 }
 
-input[type="checkbox"]:checked+label span {
+.sidebar sidebar input[type="checkbox"]:checked+label span {
     background: url(../images/caret-left-solid.svg) left top no-repeat;
 }
 

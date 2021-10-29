@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>BLOOM - Trang chủ</title>
+    <title>BLOOM - Giao dịch rút tiền</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="../public/images/logo_white.png">
@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/stylesheets/menuStyle.css">
-    <link rel="stylesheet" href="../public/stylesheets/withdrawalStyle.css">
+    <link rel="stylesheet" href="/stylesheets/menuStyle.css">
+    <link rel="stylesheet" href="/stylesheets/withdrawalStyle.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script src="https://kit.fontawesome.com/867a38eeb9.js" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
 
     <div class="container-fluid">
         <div id="mySidebar" class="sidebar">
-            <span id="logo"><img src="../public/images/logo_white.png" alt="" width="80" height="100"></span>
+            <span id="logo"><img src="/images/logo_white.png" alt="" width="80" height="100"></span>
             <h2>BLOOM</h2>
             <input type="checkbox" id="action" value=""><label for="action"><span></span></label>
             <a href="/" class="menu active"><i class="fas fa-home"></i><span>&nbsp;&nbsp;Trang chủ</span></a>
@@ -46,9 +46,15 @@
             </div>
             <form class="withdrawal-form needs-validation" novalidate action="#" onsubmit="return false;">
                 <h1 class="text-center">Giao dịch rút tiền</h1>
-                <p>Họ và Tên: <span></span></p>
-                <p>Số dư tài khoản của dự án: <span></span></p>
-                <p>Tên dự án: <span></span></p>
+                <p>Họ và Tên: <span>
+                    <%= project.Fundraiser %>
+                </span></p>
+                <p>Số dư tài khoản của dự án: <span>
+                    <%= money.toLocaleString() %>
+                </span>VNĐ</p>
+                <p>Tên dự án: <span>
+                    <%= project.Name %>
+                </span></p>
                 <div class="mb-3 has-validation">
                     <label for="exampleFormControlInput1" class="form-label">Giá trị</label>
                     <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Giá trị giao dịch" required>
@@ -138,8 +144,8 @@
     </script>
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="../public/javascripts/menuScript.js"></script>
-    <script src="../public/javascripts/LoginScript.js"></script>
+    <script src="/javascripts/menuScript.js"></script>
+    <script src="/javascripts/LoginScript.js"></script>
 </body>
 
 </html>
